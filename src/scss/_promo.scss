@@ -1,114 +1,82 @@
 .promo {
-    margin-top: 123px;
     position: relative;
     max-width: 100vw;
-    min-height: 100vh;
-    // height: 919px;
-    z-index: 1;
 
-    @media screen and(max-width:1440px) {
-        min-height: auto;
-    
+    // height: 919px;
+    margin-top: 123px;
+    @media screen and (max-width: 1440px) {
+        margin-top: 118px;
     }
     @media screen and (max-width: 1024px) {
-        margin-top: 117px;
+        margin-top: 120px;
     }
-    @media screen and (max-width: 650px) {
+    @media screen and (max-width: 768px) {
         margin-top: 101px;
     }
-    &__gradient {
+    z-index: 1;
+    &::after {
+        content: "";
         position: absolute;
-        top: 0;
         left: 0;
+        top: 0;
         width: 100%;
         height: 100%;
         z-index: 2;
-        @media screen and(max-width:1440px) {
-        }
-        &::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(
-                90deg,
-                rgba(0, 0, 0, 0.8) 0.15%,
-                rgba(0, 0, 0, 0.63) 29.44%,
-                rgba(0, 0, 0, 0) 78.65%
-            );
-            z-index: 2;
-        }
+        background: linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.8) 0.15%,
+            rgba(0, 0, 0, 0.63) 29.44%,
+            rgba(0, 0, 0, 0) 78.65%
+        );
     }
 
     &__bg {
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
         height: 100%;
         object-fit: cover; /* Масштабирует изображение, чтобы заполнить всю область */
         object-position: center bottom;
         z-index: 2;
-
-        @media screen and (max-width: 1440px) {
-            object-position: center;
-            height: auto;
-        }
     }
 
     &__container {
-        display: flex;
-        align-items: center;
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: 3;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 18%;
+        @media screen and (max-width: 1024px){
+            top: 10%;
+        }
+        @media screen and (max-width: 768px){
+top: 20%;
+        }
     }
 
     &__title {
-        position: absolute;
         z-index: 4;
         font-size: 60px;
         font-weight: 700;
         text-transform: uppercase;
-        top: 20%;
-        // transform: translateY(-50%);
+     
         span {
             text-transform: none;
             font-family: "Pf-Scandal-Pro";
             font-weight: 900;
             font-size: 40px;
-            br:last-child {
-                display: none;
-            }
         }
         @media screen and (max-width: 1440px) {
             font-size: 50px;
-            top: calc(35% - 117px);
         }
-        @media screen and (max-width: 1024px) {
-            top: calc(45% - 117px);
-        }
+       
         @media screen and (max-width: 768px) {
-            top: calc(42% - 117px);
-            span {
-                display: block;
-                max-width: 350px;
-                br:last-child {
-                    display: block;
-                }
-            }
-            font-size: 35px;
+            font-size: 38px;
         }
         @media screen and (max-width: 500px) {
-            font-size: 26px;
-            position: relative;
-            margin-top: 107px;
-            span {
-                font-size: 24px;
-            }
-        }
-        @media screen and (max-width: 360px) {
-            span {
-                font-size: 24px;
+            font-size: 25px;
+            span{
+                font-size: 22px;
             }
         }
     }

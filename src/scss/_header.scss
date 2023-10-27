@@ -120,6 +120,22 @@
         visibility: visible;
         transform: translateX(0);
     }
+    .close {
+        &:hover {
+            svg {
+                path {
+                    fill: $orange;
+                 
+                }
+            }
+        }
+        svg {
+            path {
+                fill: $white;
+                transition: 0.3s all;
+            }
+        }
+    }
 }
 .overlay {
     width: 100%;

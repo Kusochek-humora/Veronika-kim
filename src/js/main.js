@@ -19,11 +19,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-    const promoBg = document.getElementById('promo__bg'),
-        promoSection = document.getElementById('promo');
-    window.addEventListener('resize', function () {
-        promoSection.setAttribute('style', `height:${promoBg.scrollHeight}px`);
-    })
+    // const promoBg = document.getElementById('promo__bg'),
+    //     promoSection = document.getElementById('promo'),
+    //     root = document.documentElement,
+    //     primaryColor = getComputedStyle(root).getPropertyValue('--heihgt');
+    // function heightUpdate(bg, section) {
+    //     section.setAttribute('style', `height:${bg.scrollHeight}px`);
+    // }
+    // heightUpdate(promoBg, promoSection);
+    // window.addEventListener('resize', () => {
+    //     root.style.setProperty('--heihgt', `${promoBg.scrollHeight}px`);
+    // })
     // let options = {
     //     root: promoSection,
     //     rootMargin: "0px",
