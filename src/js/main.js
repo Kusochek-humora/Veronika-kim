@@ -19,12 +19,13 @@ document.addEventListener('DOMContentLoaded', function () {
     openMenubtn.addEventListener('click', openMenuHandler);
     closeMenubtn.addEventListener('click', closeMenuHandler);
     const options = {
-        strings: ['и просто <br> хороший <br> человек', 'мадик во френдзоне','ВУЛЬВА <br><s>ПИЗДА</s><br><s>ПИСЯ</s>'],
+        strings: ['и просто <br> хороший <br> человек', 'мадик как <br> в человека паука<br>играется а?=)', 'ВУЛЬВА <br><s>ПИЗДА</s><br><s>ПИСЯ</s>'],
         typeSpeed: 100,       // Установите желаемую скорость набора символов
         backSpeed: 100,       // Скорость стирания текста
-        startDelay: 2000,     // Задержка перед началом анимации
+        startDelay: 75,     // Задержка перед началом анимации
         backDelay: 1000,     // Задержка перед стиранием текста
-        loop: true,          // Повторять анимацию
+        loop: true,
+        startDelay: 0,    // Повторять анимацию
     };
     const typed = new Typed('#typed-text', options);
 
