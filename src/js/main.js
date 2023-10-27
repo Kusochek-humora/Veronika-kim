@@ -1,5 +1,7 @@
 'use strict';
+// import Typed from 'typed.js';
 document.addEventListener('DOMContentLoaded', function () {
+
     const openMenubtn = document.getElementById('open-menu'),
         closeMenubtn = document.getElementById('close-menu'),
         mobileMenu = document.getElementById('mobile-menu'),
@@ -16,8 +18,15 @@ document.addEventListener('DOMContentLoaded', function () {
     overlay.addEventListener('click', closeMenuHandler);
     openMenubtn.addEventListener('click', openMenuHandler);
     closeMenubtn.addEventListener('click', closeMenuHandler);
-
-
+    const options = {
+        strings: ['и просто <br> хороший <br> человек', 'мадик во френдзоне','ВУЛЬВА <br><s>ПИЗДА</s><br><s>ПИСЯ</s>'],
+        typeSpeed: 100,       // Установите желаемую скорость набора символов
+        backSpeed: 100,       // Скорость стирания текста
+        startDelay: 2000,     // Задержка перед началом анимации
+        backDelay: 1000,     // Задержка перед стиранием текста
+        loop: true,          // Повторять анимацию
+    };
+    const typed = new Typed('#typed-text', options);
 
     // const promoBg = document.getElementById('promo__bg'),
     //     promoSection = document.getElementById('promo'),
