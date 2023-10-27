@@ -93,6 +93,9 @@
     width: 100%;
     background-color: #1a1a1a;
     height: 100%;
+    @media screen and(max-width:500px) {
+        max-width: 280px;
+    }
     .anchors,
     .social {
         display: flex;
