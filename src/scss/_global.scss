@@ -15,12 +15,13 @@ body {
     height: 100%;
     background-color: #1a1a1a;
     position: relative;
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: "Onset", serif;
     color: $white;
-    scroll-behavior: smooth;
+ 
 }
 
 h1,
