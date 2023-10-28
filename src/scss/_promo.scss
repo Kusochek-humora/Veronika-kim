@@ -45,6 +45,7 @@
         object-fit: cover; /* Масштабирует изображение, чтобы заполнить всю область */
         object-position: center bottom;
         z-index: 2;
+        display: block;
     }
 
     &__container {

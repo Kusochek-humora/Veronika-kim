@@ -18,39 +18,32 @@ document.addEventListener('DOMContentLoaded', function () {
     overlay.addEventListener('click', closeMenuHandler);
     openMenubtn.addEventListener('click', openMenuHandler);
     closeMenubtn.addEventListener('click', closeMenuHandler);
-    const options = {
-        strings: ['и просто <br> хороший <br> человек', 'мадик как <br> в человека паука<br>играется а?=)', 'ВУЛЬВА <br><s>ПИЗДА</s><br><s>ПИСЯ</s>'],
-        typeSpeed: 100,       // Установите желаемую скорость набора символов
-        backSpeed: 100,       // Скорость стирания текста
-        startDelay: 75,     // Задержка перед началом анимации
-        backDelay: 1000,     // Задержка перед стиранием текста
-        loop: true,
-        startDelay: 0,    // Повторять анимацию
-    };
-    const typed = new Typed('#typed-text', options);
 
-    // const promoBg = document.getElementById('promo__bg'),
-    //     promoSection = document.getElementById('promo'),
-    //     root = document.documentElement,
-    //     primaryColor = getComputedStyle(root).getPropertyValue('--heihgt');
-    // function heightUpdate(bg, section) {
-    //     section.setAttribute('style', `height:${bg.scrollHeight}px`);
-    // }
-    // heightUpdate(promoBg, promoSection);
-    // window.addEventListener('resize', () => {
-    //     root.style.setProperty('--heihgt', `${promoBg.scrollHeight}px`);
-    // })
-    // let options = {
-    //     root: promoSection,
-    //     rootMargin: "0px",
-    //     threshold: 1.0,
+    $('.marquee').marquee({
+        //duration in milliseconds of the marquee
+        duration: 15000,
+        //gap in pixels between the tickers
+        gap: 200,
+        //time in milliseconds before the marquee will start animating
+        delayBeforeStart: 0,
+        //'left' or 'right'
+        direction: 'left',
+        //true or false - should the marquee be duplicated to show an effect of continues flow
+        duplicated: true,
+
+        startVisible:1
+    });
+    // const options = {
+    //     strings: ['и просто <br> хороший <br> человек', 'мадик как <br> в человека паука<br>играется а?=)', 'ВУЛЬВА <br><s>ПИЗДА</s><br><s>ПИСЯ</s>'],
+    //     typeSpeed: 100,       // Установите желаемую скорость набора символов
+    //     backSpeed: 100,       // Скорость стирания текста
+    //     startDelay: 75,     // Задержка перед началом анимации
+    //     backDelay: 1000,     // Задержка перед стиранием текста
+    //     loop: true,
+    //     startDelay: 0,    // Повторять анимацию
     // };
-    // let callback = function (entries, observer) {
+    // const typed = new Typed('#typed-text', options);
 
-    //     console.log('qweqwe')
 
-    // };
-    // let observer = new IntersectionObserver(callback, options);
-    // observer.observe(promoBg);
 
 })

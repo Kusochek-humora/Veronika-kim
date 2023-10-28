@@ -31,7 +31,9 @@ export const buildHtml = () => {
 export const buildJs = (done) => {
 	gulp.src([
 		'src/js/vendor/*.js',
-		'node_modules/typed.js/dist/typed.umd.js'
+		'node_modules/typed.js/dist/typed.umd.js',
+		'node_modules/jquery/dist/jquery.js',
+		'node_modules/jquery.marquee/jquery.marquee.js',
 	])
 		.pipe(plumber())
 		.pipe(uglify())

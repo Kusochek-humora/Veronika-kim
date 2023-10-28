@@ -35,6 +35,8 @@
     "gulp-svgmin": "^3.0.0"
   },
   "dependencies": {
+    "jquery": "^3.7.1",
+    "jquery.marquee": "^1.6.0",
     "magnific-popup": "^1.1.0",
     "normalize.css": "^8.0.1",
     "typed.js": "^2.0.16"

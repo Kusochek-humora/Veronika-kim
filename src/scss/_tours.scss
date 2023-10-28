@@ -1,0 +1,261 @@
+body {
+    // overflow: hidden;
+    overflow-x: hidden;
+}
+.wrapper {
+    position: relative;
+    height: 100px;
+}
+// .running-text {
+//     white-space: nowrap;
+//     position: absolute;
+//     top: 0;
+//     left: 100%;
+//     animation: runText 4s linear infinite;
+// }
+
+@keyframes runText {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+.tours {
+    &__running {
+        position: relative;
+        background-color: #fff;
+        padding: 20px 0;
+        height: 80px;
+        overflow: hidden;
+        max-width: 100vw;
+        width: 100%;
+        .js-marquee {
+            span {
+                color: #000;
+
+                font-size: 36px;
+
+                font-weight: 700;
+
+                letter-spacing: 3.6px;
+                text-transform: uppercase;
+            }
+            display: flex;
+            flex-direction: row;
+            gap: 0 200px;
+        }
+    }
+    &__container {
+        margin-top: 80px;
+    }
+
+    &__title {
+        width: 100%;
+        color: #7e7e7e;
+
+        font-size: 24px;
+
+        font-weight: 400;
+        text-align: center;
+        text-transform: lowercase;
+        span {
+            color: $white;
+
+            font-size: 64px;
+
+            font-weight: 700;
+
+            text-transform: uppercase;
+        }
+    }
+
+    &__tickets {
+   
+    }
+
+    &__ticket {  padding-bottom: 40px;
+        margin-top: 40px;
+        display: flex;
+        border-bottom: 1px solid #797979;
+        &:last-of-type {
+            border-bottom: none;
+        }
+    }
+
+    &__ticket-item {
+        flex: 1 1 20%;
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        gap: 5px 0;
+      
+        align-items: flex-start;
+    }
+    &__ticket-item--time {
+        flex-direction: row;
+        gap: 0 20px;
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    &__ticket-date,
+    &__ticket-start {
+        font-weight: bold;
+        font-weight: 700;
+    }
+
+    &__ticket-city {
+        text-transform: uppercase;
+    }
+
+    &__ticket-title {
+        color: #7e7e7e;
+        font-size: 16px;
+    }
+
+    // &__ticket-start {
+    // }
+
+    // &__ticket-address {
+    // }
+
+    &__ticket-buy {
+        border: 1px solid #fff;
+        padding: 10px 20px;
+        font-size: 18px;
+        position: relative;
+
+        display: flex;
+        gap: 0 13px;
+
+        transition: 0.3s all;
+        svg {
+            transition: 0.3s all;
+            height: 20px;
+            width: 20px;
+            path {
+                transition: 0.3s all;
+            }
+        }
+        @media (any-hover: hover){
+            &:hover {
+                border: 1px solid $orange;
+                color: $orange;
+                svg {
+                    transform: rotateZ(45deg);
+                    path {
+                        fill: $orange;
+                    }
+                }
+            }
+        }
+      
+        // &::after {
+        //     content: "";
+        //     position: absolute;
+        //     top: 50%;
+        //     transform: translateY(-50%);
+        //     right: 0;
+        //     background-image: url(../images/arrow.svg);
+        //     width: 24px;
+        //     height: 24px;
+        // }
+    }
+
+    @media screen and (max-width: 1024px) {
+        &__ticket {
+            align-items: center;
+        }
+        &__ticket-item:last-child {
+            align-items: center;
+            flex: 1 1 30%;
+        }
+        &__ticket-item:first-child {
+            flex: 1 1 10%;
+        }
+        &__ticket-item:nth-child(2) {
+            flex: 1 1 10%;
+            gap: 20px 0;
+            flex-direction: column;
+            div {
+            }
+        }
+        &__ticket-item:nth-child(3) {
+            flex: 1 1 20%;
+        }
+    }
+    @media screen and (max-width: 650px) {
+        &__title {
+            span {
+                font-size: 40px;
+            }
+        }
+        &__ticket{
+            gap: 30px 0;
+        }
+        &__ticket-item:first-child {
+            flex: 1 1 auto;
+        }
+        &__ticket-item:nth-child(2) {
+            flex: 1 1 auto;
+            gap: 0 20px;
+
+            flex-direction: row;
+            justify-content: flex-end;
+            div {
+                text-align: right;
+            }
+        }
+        &__ticket {
+            align-items: flex-start;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        &__ticket-item:nth-child(3) {
+            flex: 1 1 100%;
+            br {
+                display: none;
+            }
+        }
+        &__ticket-item:last-child {
+            align-items: normal;
+            flex: 1 1 100%;
+        }
+        &__ticket-buy {
+            justify-content: center;
+            border: 1px solid $orange;
+            color: $orange;
+            svg {
+                transform: rotateZ(45deg);
+                path {
+                    fill: $orange;
+                }
+            }
+          
+        }
+    }
+    @media screen and (max-width: 500px) {
+        &__ticket-item:first-child {
+            flex: 1 1 100%;
+        }
+        &__ticket-item:nth-child(2) {
+            flex: 1 1 100%;
+            gap: 0 20px;
+
+            flex-direction: row;
+            justify-content: flex-start;
+            div {
+                text-align: left;
+            }
+        }
+        &__title {
+            span {
+                font-size: 32px;
+            }
+        }
+    }
+}
