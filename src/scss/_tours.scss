@@ -1,11 +1,5 @@
-body {
-    // overflow: hidden;
-    overflow-x: hidden;
-}
-.wrapper {
-    position: relative;
-    height: 100px;
-}
+
+
 // .running-text {
 //     white-space: nowrap;
 //     position: absolute;
@@ -72,9 +66,9 @@ body {
         }
     }
 
-    &__tickets {
+    // &__tickets {
    
-    }
+    // }
 
     &__ticket {  padding-bottom: 40px;
         margin-top: 40px;
@@ -181,8 +175,7 @@ body {
             flex: 1 1 10%;
             gap: 20px 0;
             flex-direction: column;
-            div {
-            }
+           
         }
         &__ticket-item:nth-child(3) {
             flex: 1 1 20%;
