@@ -34,6 +34,21 @@ document.addEventListener('DOMContentLoaded', function () {
         startVisible: 1
     });
 
+    $('.merch__running').marquee({
+        //duration in milliseconds of the marquee
+        duration: 15000,
+        //gap in pixels between the tickers
+        gap: 200,
+        //time in milliseconds before the marquee will start animating
+        delayBeforeStart: 0,
+        //'left' or 'right'
+        direction: 'left',
+        //true or false - should the marquee be duplicated to show an effect of continues flow
+        duplicated: true,
+
+        startVisible: 1
+    });
+
     $('.video__running').marquee({
         //duration in milliseconds of the marquee
         duration: 15000,
@@ -50,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 
-    const swiper = new Swiper(".swiper", {
+    const swiper = new Swiper(".video__swiper", {
         loop: true,
         pagination: {
             el: ".swiper-pagination",
@@ -79,30 +94,73 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     });
-    // const option = {
-    //     //duration in milliseconds of the marquee
-    //     duration: 15000,
-    //     //gap in pixels between the tickers
-    //     gap: 200,
-    //     //time in milliseconds before the marquee will start animating
-    //     delayBeforeStart: 0,
-    //     //'left' or 'right'
-    //     direction: 'left',
-    //     //true or false - should the marquee be duplicated to show an effect of continues flow
-    //     duplicated: true,
 
-    //     startVisible: 1
-    // };
-    // const options = {
-    //     strings: ['и просто <br> хороший <br> человек', 'мадик как <br> в человека паука<br>играется а?=)', 'ВУЛЬВА <br><s>ПИЗДА</s><br><s>ПИСЯ</s>'],
-    //     typeSpeed: 100,       // Установите желаемую скорость набора символов
-    //     backSpeed: 100,       // Скорость стирания текста
-    //     startDelay: 75,     // Задержка перед началом анимации
-    //     backDelay: 1000,     // Задержка перед стиранием текста
-    //     loop: true,
-    //     startDelay: 0,    // Повторять анимацию
-    // };
-    // const typed = new Typed('#typed-text', options);
+
+    const swiper2 = new Swiper(".merch__swiper", {
+        autoplay: {
+            delay: 4000,
+        },
+        loop: true,
+        // pagination: {
+        //     el: ".swiper-pagination",
+        //     clickable: true
+        // },
+
+        breakpoints: {
+            // when window width is >= 320px
+            320: {
+                slidesPerView: 1,
+                // spaceBetween: 20
+            },
+            // when window width is >= 480px
+            // 480: {
+            //   slidesPerView: 3,
+            //   spaceBetween: 30
+            // },
+            // when window width is >= 640px
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            }
+        }
+    });
+    function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+    function checkVisibility() {
+        if (isElementInViewport(animatedElement)) {
+            // Элемент стал видимым, теперь можно запустить Typed.js анимацию.
+            const options = {
+                strings: ['coming soon...'],
+                typeSpeed: 100,       // Установите желаемую скорость набора символов
+                backSpeed: 100,       // Скорость стирания текста
+                startDelay: 75,     // Задержка перед началом анимации
+                backDelay: 100,     // Задержка перед стиранием текста
+                loop: true,// Повторять анимацию
+                startDelay: 0,
+            };
+            const typed = new Typed('#coming-soon', options);
+            window.removeEventListener("scroll", checkVisibility);
+        }
+    }
+
+    window.addEventListener("scroll", checkVisibility);
+
+    // Проверьте видимость элемента при загрузке страницы.
+
+    const animatedElement = document.getElementById("merch");
+
 
 
 
