@@ -18,6 +18,10 @@
 }
 
 .tours {
+    margin-bottom: 200px;
+    @media screen and (max-width:768px){
+        margin-bottom: 150px;
+    }
     &__running {
         position: relative;
         background-color: #fff;

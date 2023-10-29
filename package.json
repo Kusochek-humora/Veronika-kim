@@ -39,6 +39,7 @@
     "jquery.marquee": "^1.6.0",
     "magnific-popup": "^1.1.0",
     "normalize.css": "^8.0.1",
+    "swiper": "^11.0.3",
     "typed.js": "^2.0.16"
   }
 }
