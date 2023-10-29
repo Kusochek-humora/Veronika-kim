@@ -162,6 +162,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const animatedElement = document.getElementById("merch");
 
 
-
+    window.addEventListener("load", function () {
+        // Скрыть прелоадер после полной загрузки страницы
+        const preloader = document.querySelector(".preloader");
+        preloader.addEventListener("animationend", function () {
+            preloader.style.display = "none";
+        });
+        document.body.classList.remove('preloader-active')
+    });
 
 })
