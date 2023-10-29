@@ -144,11 +144,11 @@ document.addEventListener('DOMContentLoaded', function () {
             const options = {
                 strings: ['coming soon...'],
                 typeSpeed: 100,       // Установите желаемую скорость набора символов
-                backSpeed: 100,       // Скорость стирания текста
+                backSpeed: 75,       // Скорость стирания текста
                 startDelay: 75,     // Задержка перед началом анимации
-                backDelay: 100,     // Задержка перед стиранием текста
+              
                 loop: true,// Повторять анимацию
-                startDelay: 0,
+                startDelay: 1,
             };
             const typed = new Typed('#coming-soon', options);
             window.removeEventListener("scroll", checkVisibility);
